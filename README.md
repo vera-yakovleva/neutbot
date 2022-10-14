@@ -13,13 +13,17 @@ curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - && \
 sudo apt-get install nodejs -y && \
 echo -e "\nnodejs > $(node --version).\nnpm  >>> v$(npm --version).\n"
 ```
-4. переходим в папку проекта и устанавливаем необходимые модули
+4. переходим в папку проекта
 ```
 cd /$USER/haqq_bot
+```
+5. устанавливаем необходимые модули
+```
 npm i
 ```
 5. создаем файл .env 
-```nano env
+```
+nano env
 ```
 и вводим необходимые данные для работы бота в файл .env
 ```
