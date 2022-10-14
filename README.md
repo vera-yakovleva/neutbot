@@ -63,7 +63,9 @@ pm2 stop index
 
 ## Что умеет бот
 
-Бот каждые INFOTIME проверяет синхронизацию ноды, не попала ли нода в тюрьму и сообщает при выходе нового пропозала. А также имеет команды для проверки вручную:
+Бот каждые INFOTIME проверяет синхронизацию ноды, jailed, выход нового пропозала. В случае плохих результатов уведомляет пользователя. <br>
+
+А также имеет команды для проверки вручную:
 ```
   /start - Приветствие
   /info - Информация о валидаторе
@@ -74,3 +76,17 @@ pm2 stop index
   /vsync - Информация о синхронизации
   /settime - Частота отправки сообщений при критических ошибках ноды
 ```
+
+## Подробнее о коде:
+![code1](https://user-images.githubusercontent.com/56988566/195885061-f047239e-be13-4637-addd-223c462700b6.png) <br>
+Функция loop() каждые infotime секунда запускает функцию prov() <br>
+Функция `let valiki = await infop('infoval',valoper)` возвращает состояние валидатора: <br>
+![code2](https://user-images.githubusercontent.com/56988566/195886216-6ae6ee2b-c077-4a14-9d23-63993f0ea7e2.png) <br>
+если `jailed` станет `true`, то отправит сообщение `valoper jailed` <br>
+Функция `let vsync = await infop('vsync')` возвращает состояние синхронизации ноды: <br>
+![code3](https://user-images.githubusercontent.com/56988566/195887012-69145bd2-e71b-463e-86b6-56bc92dad1ef.png) <br>
+Если `catching_up` станет `true`, то отправит сообщение `the node is not synchronized, check the synchronization information with the /vsync command` <br>
+Функция `let allprop = await infop('allprop')` возвращает список всех пропозалов:  <br>
+![code4](https://user-images.githubusercontent.com/56988566/195887982-113516e4-e1db-42e1-afd7-94f14672b222.png)  <br>
+Потом берется последний пропозал и сравниватся с `LASTPROPOSAL`. Если последний пропозал больше, чем в `LASTPROPOSAL`, то отправляется сообщение пользователю и `LASTPROPOSAL` перезаписывается.
+
