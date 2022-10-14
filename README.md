@@ -89,4 +89,24 @@ pm2 stop index
 Функция `let allprop = await infop('allprop')` возвращает список всех пропозалов:  <br>
 ![code4](https://user-images.githubusercontent.com/56988566/195887982-113516e4-e1db-42e1-afd7-94f14672b222.png)  <br>
 Потом берется последний пропозал и сравниватся с `LASTPROPOSAL`. Если последний пропозал больше, чем в `LASTPROPOSAL`, то отправляется сообщение пользователю и `LASTPROPOSAL` перезаписывается.
+## О ручных командах:
+### /start - Приветствие
+![r1](https://user-images.githubusercontent.com/56988566/195889424-8ed1cd75-29fe-478c-b605-8782ff685339.png)
+### /info - Информация о валидаторе
+![r2](https://user-images.githubusercontent.com/56988566/195889673-c1ce7375-ac7f-4663-9574-58eb54a1ea81.png)
+### /aprop - Список активных proposal
+![r3](https://user-images.githubusercontent.com/56988566/195890052-affac785-41a1-4923-bc12-c019accad3ed.png)
+### /allprop - Список всех proposals
+![r4](https://user-images.githubusercontent.com/56988566/195890241-95892ae6-3a3b-49e7-98dc-bbe741d47e52.png)
+### /df - Информация о жестком диске
+![r5](https://user-images.githubusercontent.com/56988566/195890492-58c9f148-cb7e-4099-b014-c8b42679efdb.png)
+### /free - Информация об ОЗУ
+![r6](https://user-images.githubusercontent.com/56988566/195890750-545afafd-f0d9-46d1-b914-271bfe5980ba.png)
+### /vsync - Информация о синхронизации
+![r7](https://user-images.githubusercontent.com/56988566/195890968-c06ce3ee-4f05-41a3-9cb6-030acc0a537c.png)
+### /settime - Частота отправки сообщений при критических ошибках ноды
+![r8](https://user-images.githubusercontent.com/56988566/195891234-2e22a9f7-8e35-46fe-b4e6-91e4ad5dfb6f.png)
+
+Ссылка на рабочий бот ![bot](https://t.me/haqq_test_bot). Но она будет показывать данные моей ноды и моего сервера
+
 
