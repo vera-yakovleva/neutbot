@@ -36,7 +36,7 @@ VALOPER=valoper_address
 CHATID=chat_id
 INFOTIME=300
 ```
-> TOKEN - телеграм токен
+> TOKEN - телеграм токен <br>
 > valoper_address - валопер адрес
 > chat_id - id чата
 > 300 - задержка повторных отправок сообщений при критических ошибках (можно редактировать в самом боте)
