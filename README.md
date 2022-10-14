@@ -16,3 +16,5 @@ nano env:<br>
 ```VALOPER=valoper_address
 CHATID=chat_id
 INFOTIME=300
+```
+dvxcv
