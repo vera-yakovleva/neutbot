@@ -13,6 +13,8 @@ curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - && \
 sudo apt-get install nodejs -y && \
 echo -e "\nnodejs > $(node --version).\nnpm  >>> v$(npm --version).\n"
 ```
+результат выполнения:
+![resultatnpm](https://user-images.githubusercontent.com/56988566/195841827-4764e964-0a8a-4ebd-b867-1cd641280008.png)
 4. переходим в папку проекта
 ```
 cd /$USER/haqq_bot
