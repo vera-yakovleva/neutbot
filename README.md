@@ -35,6 +35,7 @@ BOT_TOKEN=TOKEN
 VALOPER=valoper_address
 CHATID=chat_id
 INFOTIME=300
+LASTPROPOSAL=155
 ```
 > TOKEN - телеграм токен <br>
 > valoper_address - валопер адрес <br>
