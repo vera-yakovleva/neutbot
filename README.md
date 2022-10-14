@@ -45,9 +45,16 @@ INFOTIME=300
 ```
 npm i pm2 -g
 ```
-8. запуск бота
+8. запуск бота (обязательно выполняется в папке бота)
 ```
 pm2 start index.js
 ```
 > ![npm_start](https://user-images.githubusercontent.com/56988566/195844549-5aaae4d7-af1a-44d2-acb0-eaeb207d14a6.png)
 > статус online говорит о том, что бот запущен
+9. для остановки бота выполняется по команде: (расширение файла .js необязательна)
+```
+pm2 stop index
+```
+![npm_st](https://user-images.githubusercontent.com/56988566/195845413-1b9281d9-df54-4e59-9a0e-0a2a9a85c914.png)
+
+бот остановлен
