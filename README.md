@@ -12,8 +12,7 @@ cd /$USER/haqq_bot
 npm i
 5. создаем файл .env и вводим необходимые данные для работы бота в файл .env
 nano env
-{BOT_TOKEN=TOKEN}
-{VALOPER=valoper_address}
+![](BOT_TOKEN=TOKEN)
+![](VALOPER=valoper_address
 CHATID=chat_id
-INFOTIME=300
-</code>
+INFOTIME=300)
