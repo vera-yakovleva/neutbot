@@ -11,6 +11,12 @@ module.exports = async function(chto, txdata =''){
           case 'aprop':
             tmp = "haqqd query gov proposals -o json --limit=1000 \| jq \'\.proposals[] \| select(\.status==\"PROPOSAL_STATUS_DEPOSIT_PERIOD\")' \| jq -r";
             break;
+          case 'peers':
+            tmp = "curl -s http\:\/95\.216\.241\.100\:36657/net_info \| grep n_peers";
+            break;
+          case 'rest':
+              tmp = "systemctl restart haqqd";
+              break;
           case 'allprop':
               tmp = "haqqd query gov proposals -o json --limit=1000 \| jq \'\.proposals[] \' \| jq -r \'\.proposal_id + \" \" + \.status\'";
               break;
