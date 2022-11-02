@@ -46,14 +46,14 @@ async function prov(){
     //сообщение о новом пропозале
     bot.sendMessage(chatId, `New propozal came out ${lpropn}`);
   }
-  let peers = await infop('peers')
-  peers = peers.split('"');
-  let peers_kol = parseInt(peers[3])
-  if (peers_kol <= 2) {
-    rest = await infop('rest')
-    bot.sendMessage(chatId, `Выполнен рестарт, пиров было не больше 2`);
-    await sleep(4000)
-  }
+  //let peers = await infop('peers')
+  //peers = peers.split('"');
+  //let peers_kol = parseInt(peers[3])
+  //if (peers_kol <= 2) {
+ //   rest = await infop('rest')
+ //   bot.sendMessage(chatId, `Выполнен рестарт, пиров было не больше 2`);
+ //   await sleep(4000)
+ // }
 }
 
 (function loop() {
