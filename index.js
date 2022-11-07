@@ -53,7 +53,7 @@ async function prov(){
   peers = await infop('peers',myip)
   peers = peers.split('"');
   peers_kol = parseInt(peers[3])
-  console.log(peers_kol)
+ 
   if (peers_kol <= 2) {
     rest = await infop('rest')
     bot.sendMessage(chatId, `Выполнен рестарт, пиров было не больше 2`);
@@ -111,7 +111,7 @@ const start = () => {
       peers = await infop('peers',myip)
       peers = peers.split('"');
       peers_kol = parseInt(peers[3])
-      console.log(peers_kol)
+      
       return bot.sendMessage(chatId, `пиров ${peers_kol}`);
     }
 
