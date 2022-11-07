@@ -7,13 +7,15 @@ module.exports = async function(chto, txdata =''){
           case 'infoval':
             tmp = "haqqd q staking validators -o json --limit=1000 \| jq \'\.validators[] \| select(\.operator_address==\"" + txdata + "\" )' \| jq -r ";
             break;
-          
+          case 'myip':
+              tmp = "cat /root/.haqqd/config/client\.toml \| grep node";
+              break;
           case 'aprop':
             tmp = "haqqd query gov proposals -o json --limit=1000 \| jq \'\.proposals[] \| select(\.status==\"PROPOSAL_STATUS_DEPOSIT_PERIOD\")' \| jq -r";
             break;
-          //case 'peers':
-           // tmp = "curl -s http\:\/127\.0\.0\.1\:26657/net_info \| grep n_peers";
-           // break;
+          case 'peers':
+            tmp = `curl -s http://${txdata}/net_info | grep n_peers`;
+            break;
           case 'rest':
               tmp = "systemctl restart haqqd";
               break;
