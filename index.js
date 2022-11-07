@@ -13,7 +13,6 @@ bot.setMyCommands([
   {command: '/info', description: 'Information about the validator'},
   {command: '/aprop', description: 'List of active proposals'},
   {command: '/allprop', description: 'List of all proposals'},
-  {command: '/peer', description: 'The number of peers'},
   {command: '/df', description: 'Hard disk information'},
   {command: '/free', description: 'RAM Information'},
   {command: '/vsync', description: 'Information about node synchronization'},
@@ -96,17 +95,7 @@ const start = () => {
       }
       return bot.sendMessage(chatId, `${allprop}`);
     }
-    if(text === '/peer'){
-      let myip = await infop('myip')
-      let stpos = myip.indexOf("tcp://")
-      myip = myip.slice(stpos+6,myip.length-2)  
-      myip = myip.replace('6658', '6657');
-      peers = await infop('peers',myip)
-      peers = peers.split('"');
-      peers_kol = parseInt(peers[3])
-      //sleep.sleep(4)      
-      return bot.sendMessage(chatId, `пиров ${peers_kol}`);
-    }
+   
     if(text === '/df'){      
       df = await infop('df')
       if(!df){
