@@ -36,7 +36,7 @@ nano .env
 BOT_TOKEN=TOKEN
 VALOPER=valoper_address
 CHATID=chat_id
-INFOTIME=300
+INFOTIME=10
 LASTPROPOSAL=155
 ```
 > TOKEN - телеграм токен <br>
@@ -110,4 +110,6 @@ pm2 stop index
 ### /settime - Частота отправки сообщений при критических ошибках ноды
 ![r8](https://user-images.githubusercontent.com/56988566/195891234-2e22a9f7-8e35-46fe-b4e6-91e4ad5dfb6f.png)
 
-
+#Изменения
+7.11 Добавил команду проверки количества пиров,
+Также бот автоматически каждые INFOTIME (у меня 10 сек) проверяет количество пиров. И если пиров меньше равно 2 перезагружает ноду
